@@ -8,7 +8,8 @@
         
             function trocarTexto(umTexto){
                 var elemento = document.getElementById("frase")
-                elemento.innerHTML = umTexto
+                var elementoNovo = document.getElementById("novaFrase").value
+                elemento.innerHTML = elementoNovo
             }
         
         </script>
@@ -20,6 +21,9 @@
         <input id="novaFrase" type="text"><br>
         <input id="botao" type="button"
             value="Trocar Frase"
-            onclick="trocarTexto('olá');"><br>
+            onclick="trocarTexto();"><br>
+            <a href="calculadora.html">
+                calculadora
+            </a>
     </body>
 </html>
