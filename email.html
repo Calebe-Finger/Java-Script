@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Email</title>
+        <script src="js/myscript.js" type="text/javascript"></script>
+        <script>
+            function validarEmail() {
+                var email = document.getElementById("idEmail").value
+                if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+                    alert("Email inválido")
+                    return
+                }
+            }
+        </script>  
+    </head>
+    <body>
+        
+        <a href="index.html">Página Inicial</a>
+        <br>
+        <br>   
+
+
+        Está com Dúviadas? 
+        <a href="mailto:email@provedor.com.br?&subject=Assunto do email
+        &cc=copia@provedor.com.br&bcc=copiaoculta@provedor.com.br&body=Olá galera!">Enviar email
+        </a>
+
+            <br>
+
+        Contate pelo WatsApp: <a href="https://wa.me/554999999999
+            text=mensagem%20de520hoje">WatsApp
+        </a>
+
+            <br>
+
+        <form id="idForm" action="https://app.headlessforms.cloud/api/v1/form-submission/UF7YAmmfN8" method="POST">
+            E-mail: <input placeholder="nada@nada.com" title="Um email válido!" type="email" onblur="validarEmail" name="email" id="idEmail" pattern="" required>
+               
+                <br>
+
+            Nome: <input placeholder="Nome Sobrenome" title="Seu nome e sobrenome" type="text" 
+            name="nome" id="idNome" pattern="[a-z]{5,12}" minlength="5" maxlength="12" required><br>
+
+
+            
+            
+            <textarea name="corpo" cols="33" rows="7" title="Seu email" placeholder="O texto do seu email"></textarea>
+            <br>
+            
+            <br>
+            <input type="submit" value="Enviar"/>
+        </form> 
+         
+
+
+    </body>
+</html>
+
