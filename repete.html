@@ -47,10 +47,48 @@
                 
             }
         }
+
+        function nome() {
+            var a = ["José", "Maria", "Padre", "Joana", "Bento", "Francisco"]
+            for (let index = 0; index < a.length; index++) {
+                const element = a [index];
+
+                if (element == "padre"){
+                    document.write("casinha:" + index + " tem " + element + "<br>")
+                    break
+                }
+            }
+            var quem = prompt("Diga um nome")
+            var ondeEsta = a.indexOf(quem)
+            if(ondeEsta != -1){
+                document.write("casinha" + ondeEsta + " tem " + quem + "<br>")
+                a.splice(ondeEsta,1)    
+            }else{
+                document.write("não achei: " + quem)
+            }
+        }
+
+        const arrayValores = [];
+        for (let i = 0; i <= numeroFornecido; i++) {
+            arrayValores.push(i);
+        }
+
+        document.write("Original: " + arrayValores + "<br>");
+        document.write("<hr");
+
+        const valorRemover = parseInt(prompt("Digite um valor para remover"))
+
+        const index = arrayValores.indexOf(valorRemover);
+        if (index !== -1) {
+            arrayValores.splice (index, 1)
+        }
+
+        document.write("Alterado: " + arrayValores + "<br>");
+        document.write("<hr>")
     </script>
 </head>
 <body>
-    <input type="button" value="Enviar" onclick="contar4();"
+    <input type="button" value="Enviar" onclick="nome()">
 </body>
 
 </html>
