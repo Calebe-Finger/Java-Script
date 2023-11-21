@@ -6,15 +6,50 @@
     <title>Repete</title>
 
     <script>
-        function contar() {
-            for (let i = 0; i < 10; i++) {
-                document.write(i + "<br>")  
+        function contar1() {
+            var soma = 0
+            for (let i = 0; i < 1000; i++) {
+                document.write(i + " " + soma + "<br>")
+                soma = soma + i
             }
+            document.write("soma final = " + soma  + "<br>")  
+        }
+
+        function contar2() {
+            var idade = prompt("Diga uma idade:");
+            while (idade != 35) {
+                idade = prompt("Errou! Diga outra idade:")
+            }
+            alert("acertou! Era 35 mesmo!")
+        }
+
+        function contar3() {
+            var soma = 0
+            var n = 0
+            while(n < 21) {
+                if(soma + n > 101) {
+                    break
+                } else {
+                    soma = soma + n
+                }
+                n = n + 1
+            }
+            document.write("soma = " + soma)
+        }
+
+        function contar4() {
+            var numeros = [9, 21, 7, 15];
+            var cars = ["BMW", "Volvo", "Volkswagen", "Ford", "Fiat", "Audi", "Abobrinha"];
+            
+            var novaMarca = prompt("Diga uma marca de carro")
+            cars.unshift(novaMarca)
+            document.write(cars)
+
         }
     </script>
 </head>
 <body>
-    <input type="button" value="Enviar" onclick="contar();"
+    <input type="button" value="Enviar" onclick="contar4();"
 </body>
 
 </html>
