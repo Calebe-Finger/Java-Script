@@ -41,10 +41,11 @@
             var numeros = [9, 21, 7, 15];
             var cars = ["BMW", "Volvo", "Volkswagen", "Ford", "Fiat", "Audi", "Abobrinha"];
             
-            var novaMarca = prompt("Diga uma marca de carro")
-            cars.unshift(novaMarca)
-            document.write(cars)
-
+            for (let index = 0; index < cars.length; index++) {
+                const element = cars[index];
+                document.write(element + "<br>")
+                
+            }
         }
     </script>
 </head>
